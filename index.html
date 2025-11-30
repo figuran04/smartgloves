@@ -563,15 +563,6 @@
                   data-female="pinkglove.png"
                 />
 
-                <!-- ---------------- HOTSPOT POSITIONS ---------------- -->
-                <!-- 1: Primary Controller Pod (Knuckle area) -->
-                <!-- <div
-                  class="hotspot"
-                  style="top: 45%; left: 45%"
-                  data-component="1"
-                >
-                  1
-                </div> -->
                 <div
                   class="hotspot"
                   style="top: 32%; left: 70%"
@@ -600,33 +591,6 @@
                 >
                   R4
                 </div>
-
-                <!-- 2: Haptic Driver (Upper index area) -->
-                <!-- <div
-                  class="hotspot"
-                  style="top: 25%; left: 42%"
-                  data-component="2"
-                >
-                  2
-                </div> -->
-
-                <!-- 3: LRA Motor (Palm lower left) -->
-                <!-- <div
-                  class="hotspot"
-                  style="top: 55%; left: 28%"
-                  data-component="3"
-                >
-                  3
-                </div> -->
-
-                <!-- 4: Battery Pod (Lower wrist) -->
-                <!-- <div
-                  class="hotspot"
-                  style="top: 75%; left: 45%"
-                  data-component="4"
-                >
-                  4
-                </div> -->
                 <div
                   class="hotspot"
                   style="top: 32%; left: 20%"
@@ -655,51 +619,56 @@
                 >
                   L4
                 </div>
-
-                <!-- 5: Micro-Lipo Charger (Side of wrist) -->
-                <!-- <div
-                  class="hotspot"
-                  style="top: 35%; left: 62%"
-                  data-component="5"
-                >
-                  5
-                </div> -->
-
-                <!-- 6: Wiring Channel (Internal routing) -->
-                <!-- <div
-                  class="hotspot"
-                  style="top: 34%; left: 50%"
-                  data-component="6"
-                >
-                  6
-                </div> -->
-
                 <!-- ---------------- TOOLTIP CONTENT ---------------- -->
-                <div class="tooltip" id="tooltip5" style="top: 42%; left: 0%">
-                  <h3>🎯 Seeed XIAO (Left Core)</h3>
-                  <p>
-                    Unit utama di tangan kiri sebagai master BLE dan pusat
-                    navigasi.
-                  </p>
-                </div>
+                <a href="./details.html"
+                  ><div
+                    class="tooltip cursor-pointer"
+                    id="tooltip5"
+                    style="top: 42%; left: 0%"
+                  >
+                    <h3>🎯 Seeed XIAO (Left Core)</h3>
+                    <p>
+                      Unit utama di tangan kiri sebagai master BLE dan pusat
+                      navigasi.
+                    </p>
+                  </div>
+                </a>
 
-                <div class="tooltip" id="tooltip6" style="top: 20%; left: 5%">
-                  <h3>📡 DRV2605L (Left)</h3>
-                  <p>Driver haptik utama untuk sinyal belok kiri.</p>
-                </div>
+                <a href="./details.html"
+                  ><div
+                    class="tooltip cursor-pointer"
+                    id="tooltip6"
+                    style="top: 20%; left: 5%"
+                  >
+                    <h3>📡 DRV2605L (Left)</h3>
+                    <p>Driver haptik utama untuk sinyal belok kiri.</p>
+                  </div></a
+                >
 
-                <div class="tooltip" id="tooltip7" style="top: 75%; left: 0%">
-                  <h3>📳 LRA Motor (Left)</h3>
-                  <p>Getaran arah kiri untuk navigasi turn-by-turn.</p>
-                </div>
+                <a href="./details.html"
+                  ><div
+                    class="tooltip cursor-pointer"
+                    id="tooltip7"
+                    style="top: 75%; left: 0%"
+                  >
+                    <h3>📳 LRA Motor (Left)</h3>
+                    <p>Getaran arah kiri untuk navigasi turn-by-turn.</p>
+                  </div></a
+                >
 
-                <div class="tooltip" id="tooltip8" style="top: 95%; left: 10%">
-                  <h3>🔋 LiPo + Charger (Left)</h3>
-                  <p>Baterai & modul charging untuk daya mandiri.</p>
-                </div>
+                <a href="./details.html"
+                  ><div
+                    class="tooltip cursor-pointer"
+                    id="tooltip8"
+                    style="top: 95%; left: 10%"
+                  >
+                    <h3>🔋 LiPo + Charger (Left)</h3>
+                    <p>Baterai & modul charging untuk daya mandiri.</p>
+                  </div></a
+                >
 
                 <!--
-                <div class="tooltip" id="tooltip1" style="top: 45%; left: 55%">
+                <div class="tooltip cursor-pointer" id="tooltip1" style="top: 45%; left: 55%">
                   <h3>🎯 Smart Controller Pod</h3>
                   <p>
                     Seeed XIAO nRF52840 Sense — the brain of the glove. BLE,
@@ -707,7 +676,7 @@
                   </p>
                 </div>
 
-                <div class="tooltip" id="tooltip2" style="top: 25%; left: 52%">
+                <div class="tooltip cursor-pointer" id="tooltip2" style="top: 25%; left: 52%">
                   <h3>📡 Precision Haptic Engine</h3>
                   <p>
                     DRV2605L delivers directional vibration cues (Left / Right
@@ -715,7 +684,7 @@
                   </p>
                 </div>
 
-                <div class="tooltip" id="tooltip3" style="top: 55%; left: 38%">
+                <div class="tooltip cursor-pointer" id="tooltip3" style="top: 55%; left: 38%">
                   <h3>📳 LRA Tactile Motor</h3>
                   <p>
                     10mm coin LRA motor for strong, focused feedback even
@@ -723,7 +692,7 @@
                   </p>
                 </div>
 
-                <div class="tooltip" id="tooltip4" style="top: 75%; left: 55%">
+                <div class="tooltip cursor-pointer" id="tooltip4" style="top: 75%; left: 55%">
                   <h3>🔋 Removable Battery Pack</h3>
                   <p>
                     400mAh LiPo — whole-day ride endurance. Quick-swap design
@@ -731,7 +700,7 @@
                   </p>
                 </div>
 
-                <div class="tooltip" id="tooltip5" style="top: 35%; left: 72%">
+                <div class="tooltip cursor-pointer" id="tooltip5" style="top: 35%; left: 72%">
                   <h3>⚡ Micro-Lipo Charging Module</h3>
                   <p>
                     USB charging or magnetic pogo-dock. Safe & fast LiPo
@@ -739,32 +708,56 @@
                   </p>
                 </div>
 
-                <div class="tooltip" id="tooltip6" style="top: 45%; left: 55%">
+                <div class="tooltip cursor-pointer" id="tooltip6" style="top: 45%; left: 55%">
                   <h3>🧵 Internal Wiring Channel</h3>
                   <p>
                     Ultra-flex 30AWG silicone wires routed through hidden
                     channels for comfort & durability.
                   </p>
                 </div> -->
-                <div class="tooltip" id="tooltip1" style="top: 42%; right: 0%">
-                  <h3>🎯 Seeed XIAO (Right Core)</h3>
-                  <p>Node BLE sekunder/receiver dari tangan kiri.</p>
-                </div>
+                <a href="./details.html"
+                  ><div
+                    class="tooltip cursor-pointer"
+                    id="tooltip1"
+                    style="top: 42%; right: 0%"
+                  >
+                    <h3>🎯 Seeed XIAO (Right)</h3>
+                    <p>Node BLE sekunder/receiver dari tangan kiri.</p>
+                  </div></a
+                >
 
-                <div class="tooltip" id="tooltip2" style="top: 20%; right: 5%">
-                  <h3>📡 DRV2605L (Right)</h3>
-                  <p>Driver haptik untuk sinyal belok kanan.</p>
-                </div>
+                <a href="./details.html"
+                  ><div
+                    class="tooltip cursor-pointer"
+                    id="tooltip2"
+                    style="top: 20%; right: 5%"
+                  >
+                    <h3>📡 DRV2605L (Right)</h3>
+                    <p>Driver haptik untuk sinyal belok kanan.</p>
+                  </div></a
+                >
 
-                <div class="tooltip" id="tooltip3" style="top: 75%; right: 0%">
-                  <h3>📳 LRA Motor (Right)</h3>
-                  <p>Getaran arah kanan sesuai navigasi Google Maps.</p>
-                </div>
+                <a href="./details.html"
+                  ><div
+                    class="tooltip cursor-pointer"
+                    id="tooltip3"
+                    style="top: 75%; right: 0%"
+                  >
+                    <h3>📳 LRA Motor (Right)</h3>
+                    <p>Getaran arah kanan sesuai navigasi Google Maps.</p>
+                  </div></a
+                >
 
-                <div class="tooltip" id="tooltip4" style="top: 95%; right: 10%">
-                  <h3>🔋 LiPo + Charger (Right)</h3>
-                  <p>Daya mandiri pada sarung tangan kanan.</p>
-                </div>
+                <a href="./details.html"
+                  ><div
+                    class="tooltip cursor-pointer"
+                    id="tooltip4"
+                    style="top: 95%; right: 10%"
+                  >
+                    <h3>🔋 LiPo + Charger (Right)</h3>
+                    <p>Daya mandiri pada sarung tangan kanan.</p>
+                  </div></a
+                >
               </div>
             </div>
           </div>
@@ -775,67 +768,80 @@
             id="featuresGrid"
           >
             <div class="feature-card">
-              <div class="component-card">
-                <h4>🧭 Haptic Turn-by-Turn Navigation</h4>
-                <p>
-                  Getaran kanan = belok kanan, getaran kiri = belok kiri.
-                  Memberikan pengalaman berkendara tanpa distraksi, langsung
-                  dari Google Maps.
-                </p>
-              </div>
+              <a href="./details.html">
+                <div class="component-card">
+                  <h4>🧭 Haptic Turn-by-Turn Navigation</h4>
+                  <p>
+                    Getaran kanan = belok kanan, getaran kiri = belok kiri.
+                    Memberikan pengalaman berkendara tanpa distraksi, langsung
+                    dari Google Maps.
+                  </p>
+                </div>
+              </a>
             </div>
 
             <div class="feature-card">
-              <div class="component-card">
-                <h4>🚨 Crash Detection + Auto SOS</h4>
-                <p>
-                  IMU sensor mendeteksi benturan atau jatuh secara tiba-tiba,
-                  lalu otomatis mengirim alert ke smartphone lengkap dengan
-                  lokasi real-time.
-                </p>
-              </div>
+              <a href="./details.html" class="cursor-pointer">
+                <div class="component-card">
+                  <h4>🚨 Crash Detection + Auto SOS</h4>
+                  <p>
+                    IMU sensor mendeteksi benturan atau jatuh secara tiba-tiba,
+                    lalu otomatis mengirim alert ke smartphone lengkap dengan
+                    lokasi real-time.
+                  </p>
+                </div>
+              </a>
             </div>
 
             <div class="feature-card">
-              <div class="component-card">
-                <h4>🔄 Removable Electronic Pods</h4>
-                <p>
-                  Seluruh komponen elektronik berada di dalam modul
-                  magnet-docking yang mudah dilepas. Sarung tangan tetap bisa
-                  dicuci tanpa risiko kerusakan hardware.
-                </p>
-              </div>
+              <a href="./details.html" class="cursor-pointer">
+                <div class="component-card">
+                  <h4>🔄 Removable Electronic Pods</h4>
+                  <p>
+                    Seluruh komponen elektronik berada di dalam modul
+                    magnet-docking yang mudah dilepas. Sarung tangan tetap bisa
+                    dicuci tanpa risiko kerusakan hardware.
+                  </p>
+                </div>
+              </a>
             </div>
 
             <div class="feature-card">
-              <div class="component-card">
-                <h4>🔋 All-Day Battery Life</h4>
-                <p>
-                  Konsumsi daya super efisien untuk perjalanan panjang. Tersedia
-                  opsi quick-swap battery pack untuk touring jarak jauh.
-                </p>
-              </div>
+              <a href="./details.html" class="cursor-pointer">
+                <div class="component-card">
+                  <h4>🔋 All-Day Battery Life</h4>
+                  <p>
+                    Konsumsi daya super efisien untuk perjalanan panjang.
+                    Tersedia opsi quick-swap battery pack untuk touring jarak
+                    jauh.
+                  </p>
+                </div>
+              </a>
             </div>
 
             <div class="feature-card">
-              <div class="component-card">
-                <h4>📡 Dual-Glove Bluetooth Sync</h4>
-                <p>
-                  Glove utama terhubung ke smartphone, lalu menyalurkan perintah
-                  secara wireless ke glove kedua — bekerja mirip sistem earbuds
-                  kiri-kanan.
-                </p>
-              </div>
+              <a href="./details.html" class="cursor-pointer">
+                <div class="component-card">
+                  <h4>📡 Dual-Glove Bluetooth Sync</h4>
+                  <p>
+                    Glove utama terhubung ke smartphone, lalu menyalurkan
+                    perintah secara wireless ke glove kedua — bekerja mirip
+                    sistem earbuds kiri-kanan.
+                  </p>
+                </div>
+              </a>
             </div>
 
             <div class="feature-card">
-              <div class="component-card">
-                <h4>🌧 Weather-Resistant Design</h4>
-                <p>
-                  Pod elektronik terlindung dari percikan air. Sarung tangan
-                  sepenuhnya washable setelah modul dilepas.
-                </p>
-              </div>
+              <a href="./details.html" class="cursor-pointer">
+                <div class="component-card">
+                  <h4>🌧 Weather-Resistant Design</h4>
+                  <p>
+                    Pod elektronik terlindung dari percikan air. Sarung tangan
+                    sepenuhnya washable setelah modul dilepas.
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
         </div>

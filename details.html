@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Haptic Rider Glove — Detail Produk</title>
+
+    <script>
+      // Tailwind CDN config: expose local font `jellle` as `font-jellle`
+      tailwind_config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              jellle: ["jellle", "sans-serif"],
+            },
+            colors: {
+              "pink-soft": "#ffe5f0",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      :root {
+        --primary-bg-color: #ffe5f0;
+        --primary-text-color: #d63384;
+        --header-bg-color: #ffe5f0;
+        --glove-bg-color: #ffb6c1;
+        --button-bg-color: #ff69b4;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      @font-face {
+        font-family: "jellle";
+        src: url("Jellee-Roman/Jellee-Roman.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(
+          135deg,
+          #ffffff 0%,
+          var(--primary-bg-color) 50%,
+          #ffffff 100%
+        );
+      }
+      /* Floating animations */
+      .floating-element {
+        position: fixed;
+        pointer-events: none;
+        opacity: 0.8;
+        animation: float 6s ease-in-out infinite;
+        filter: blur(2px);
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) translateX(0px) rotate(0deg);
+        }
+        25% {
+          transform: translateY(-30px) translateX(20px) rotate(5deg);
+        }
+        50% {
+          transform: translateY(-60px) translateX(-20px) rotate(-5deg);
+        }
+        75% {
+          transform: translateY(-30px) translateX(20px) rotate(3deg);
+        }
+      }
+
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 105, 180, 0.3),
+          transparent
+        );
+      }
+
+      .circle:nth-child(1) {
+        top: 10%;
+        left: 10%;
+        animation-delay: 0s;
+      }
+      .circle:nth-child(2) {
+        top: 60%;
+        left: 80%;
+        animation-delay: 2s;
+      }
+      .circle:nth-child(3) {
+        top: 80%;
+        left: 20%;
+        animation-delay: 4s;
+      }
+      .circle:nth-child(4) {
+        top: 30%;
+        right: 10%;
+        animation-delay: 1s;
+      }
+      header {
+        margin-bottom: 60px;
+        animation: fadeInDown 1s ease-out;
+      }
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h1 {
+        font-family: "jellle", verdana, sans-serif;
+        font-size: 3.5em;
+        font-weight: 900;
+        color: #1a1a1a;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .subtitle {
+        font-family: "jellle", verdana, sans-serif;
+        color: var(--primary-text-color);
+        font-weight: 600;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flex justify-center w-full min-h-screen">
+      <!-- Floating elements aesthetic -->
+      <div class="floating-element circle"></div>
+      <div class="floating-element circle"></div>
+      <div class="floating-element circle"></div>
+      <div class="floating-element circle"></div>
+      <div class="py-10 px-5 relative z-10 mx-auto container overflow-x-hidden">
+        <header class="text-center">
+          <h1 class="font-jellle text-2xl sm:text-3xl md:text-5xl">
+            <a href="./index.html"> SMART IOT GLOVES </a>
+          </h1>
+          <p class="subtitle font-jellle text-xl sm:text-xl md:text-3xl">
+            Intelligent Navigation • Rider Safety • Modular Design
+          </p>
+        </header>
+
+        <main class="max-w-5xl mx-auto p-6">
+          <!-- Hero / Intro (Bahasa Indonesia) -->
+          <section class="bg-white rounded-xl p-6 shadow-lg">
+            <div class="md:flex md:items-center md:justify-between">
+              <div class="md:flex-1">
+                <h2 class="text-2xl md:text-3xl font-jellle font-extrabold">
+                  Smart Haptic Rider Glove — Ikhtisar Produk
+                </h2>
+                <p class="mt-3 text-gray-700 leading-relaxed">
+                  Smart Haptic Rider Glove adalah wearable ringkas yang
+                  dirancang untuk menjaga keselamatan pengendara dan mengurangi
+                  gangguan visual. Perangkat ini memberikan navigasi haptik
+                  real-time, deteksi kecelakaan dengan auto-SOS, serta modul
+                  elektronik yang dapat dilepas untuk perawatan dan penggantian.
+                </p>
+
+                <ul
+                  class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-base"
+                >
+                  <li class="flex items-start space-x-2">
+                    <span class="text-pink-bg-pink-400 font-bold">•</span
+                    ><span>Navigasi haptik tanpa melihat layar</span>
+                  </li>
+                  <li class="flex items-start space-x-2">
+                    <span class="text-pink-bg-pink-400 font-bold">•</span
+                    ><span>Komunikasi BLE low-power</span>
+                  </li>
+                  <li class="flex items-start space-x-2">
+                    <span class="text-pink-bg-pink-400 font-bold">•</span
+                    ><span>Deteksi kecelakaan & auto emergency alert</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- <div class="mt-4 md:mt-0 md:ml-6">
+              <div class="text-right">
+                <a
+                  href="#tab-komponen"
+                  class="inline-block px-4 py-2 rounded-full bg-pink-400 text-white font-semibold"
+                  >Lihat Komponen</a
+                >
+              </div>
+            </div> -->
+            </div>
+          </section>
+
+          <!-- Tabs Navigation (Bahasa Indonesia) -->
+          <div
+            class="flex flex-wrap justify-center gap-3 mt-6"
+            role="tablist"
+            aria-label="Informasi produk"
+          >
+            <button
+              class="tab-btn px-4 py-2 rounded-full bg-white border-2 border-pink-bg-pink-400 text-pink-500 font-bold"
+              data-tab="tab-idea"
+              aria-controls="tab-idea"
+              aria-selected="true"
+            >
+              Ikhtisar & Masalah
+            </button>
+            <button
+              class="tab-btn px-4 py-2 rounded-full bg-white border-2 border-pink-bg-pink-400 text-pink-500 font-bold"
+              data-tab="tab-inovasi"
+              aria-controls="tab-inovasi"
+              aria-selected="false"
+            >
+              Inovasi
+            </button>
+            <button
+              class="tab-btn px-4 py-2 rounded-full bg-white border-2 border-pink-bg-pink-400 text-pink-500 font-bold"
+              data-tab="tab-teknis"
+              aria-controls="tab-teknis"
+              aria-selected="false"
+            >
+              Alur Teknis & Integrasi
+            </button>
+            <button
+              class="tab-btn px-4 py-2 rounded-full bg-white border-2 border-pink-bg-pink-400 text-pink-500 font-bold"
+              data-tab="tab-komponen"
+              aria-controls="tab-komponen"
+              aria-selected="false"
+            >
+              Komponen Utama
+            </button>
+          </div>
+
+          <!-- Tab Contents (Bahasa Indonesia) -->
+          <div class="mt-8 space-y-8">
+            <!-- IDEA TAB -->
+            <section id="tab-idea" class="tab-content block" role="tabpanel">
+              <h3 class="text-xl font-jellle mb-3">Masalah & Solusi Kami</h3>
+              <p class="leading-relaxed text-gray-700">
+                Banyak pengendara bergantung pada navigasi smartphone — tetapi
+                melihat layar saat berkendara meningkatkan risiko kecelakaan.
+                Kami mengatasi ini dengan bahasa haptik yang intuitif (pola
+                getaran kiri/kanan), sehingga pengendara tetap fokus pada jalan.
+              </p>
+
+              <div class="mt-4 grid sm:grid-cols-2 gap-6">
+                <div class="p-4 bg-white rounded-lg shadow">
+                  <h4 class="font-semibold">Manfaat Utama</h4>
+                  <p class="text-base text-gray-600 mt-2">
+                    Mengurangi gangguan visual, mempercepat reaksi, dan
+                    menyediakan lapisan keselamatan tambahan melalui deteksi
+                    kecelakaan dan notifikasi darurat otomatis.
+                  </p>
+                </div>
+                <div class="p-4 bg-white rounded-lg shadow">
+                  <h4 class="font-semibold">Skenario Penggunaan</h4>
+                  <ul class="list-disc pl-5 text-base text-gray-600 mt-2">
+                    <li>Komuter kota dengan banyak persimpangan</li>
+                    <li>Perjalanan jauh yang membutuhkan konsentrasi tinggi</li>
+                    <li>Pengemudi kurir/ojek yang perlu tetap waspada</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <!-- INOVASI TAB -->
+            <section
+              id="tab-inovasi"
+              class="tab-content hidden"
+              role="tabpanel"
+            >
+              <h3 class="text-xl font-jellle mb-3">Apa yang Inovatif</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li>
+                  <strong>Komunikasi Dual-Glove ala TWS:</strong> Sinkronisasi
+                  low-latency antara sarung tangan primer dan sekunder untuk
+                  umpan balik haptik yang konsisten.
+                </li>
+                <li>
+                  <strong>Polanya Haptik Lanjutan:</strong> DRV2605L menyediakan
+                  preset dan waveform yang membedakan antara perintah navigasi,
+                  peringatan, dan status baterai.
+                </li>
+                <li>
+                  <strong>Pod Modular:</strong> Modul elektronik yang dapat
+                  dilepas memudahkan pencucian glove, servis, dan upgrade
+                  hardware.
+                </li>
+                <li>
+                  <strong>Arsitektur Berfokus Keselamatan:</strong> Pemrosesan
+                  IMU lokal untuk deteksi tumbukan dan prosedur SOS otomatis
+                  tanpa menunggu koneksi cloud.
+                </li>
+              </ul>
+            </section>
+
+            <!-- TECHNICAL TAB -->
+            <section id="tab-teknis" class="tab-content hidden" role="tabpanel">
+              <h3 class="text-xl font-jellle mb-3">Alur Teknis & Integrasi</h3>
+              <p class="text-gray-700">Ringkasan alur data dan kontrol:</p>
+              <ol class="list-decimal pl-6 mt-3 text-gray-700 space-y-2">
+                <li>
+                  Smartphone menjalankan aplikasi navigasi (contoh: Google Maps)
+                  → mengirim instruksi arah (turn-by-turn) ke glove primer
+                  melalui BLE.
+                </li>
+                <li>
+                  Glove primer (MCU) menerima paket BLE, memproses instruksi dan
+                  menentukan pola haptik yang sesuai.
+                </li>
+                <li>
+                  MCU memerintahkan DRV2605L via I2C untuk menggerakkan LRA
+                  (motor haptik) sesuai pola yang diinginkan.
+                </li>
+                <li>
+                  Jika diperlukan, glove primer mengirimkan sinyal ringkas ke
+                  glove sekunder (BLE direct atau mesh) agar kedua tangan
+                  memberikan umpan balik yang seragam.
+                </li>
+                <li>
+                  IMU (di dalam XIAO) memantau akselerasi dan orientasi; ketika
+                  terdeteksi peristiwa tumbukan/jerk di atas ambang, MCU
+                  menjalankan prosedur SOS: menyimpan log kejadian, menyalakan
+                  indikator, dan mengirim pesan darurat ke smartphone.
+                </li>
+              </ol>
+
+              <div class="mt-6 grid sm:grid-cols-2 gap-4">
+                <div class="p-4 bg-white rounded-lg shadow">
+                  <h4 class="font-semibold">Konektivitas</h4>
+                  <p class="text-base text-gray-600 mt-2">
+                    Bluetooth Low Energy 5.0 untuk komunikasi antara smartphone
+                    dan glove; protokol ringan untuk memastikan latensi rendah
+                    dan daya hemat. Opsi mesh dapat dipertimbangkan untuk grup
+                    perangkat lebih besar.
+                  </p>
+                </div>
+                <div class="p-4 bg-white rounded-lg shadow">
+                  <h4 class="font-semibold">Manajemen Daya</h4>
+                  <p class="text-base text-gray-600 mt-2">
+                    Pod LiPo 400mAh yang dapat dilepas — pengisian via modul
+                    charger terpisah. Desain firmware mengutamakan pola haptik
+                    hemat energi dan mode sleep saat idle.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- COMPONENTS TAB -->
+            <section
+              id="tab-komponen"
+              class="tab-content hidden"
+              role="tabpanel"
+            >
+              <h3 class="text-xl font-jellle mb-3">
+                Komponen Utama & Cara Kerjanya
+              </h3>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-4 bg-white rounded-xl shadow">
+                  <h4 class="font-bold">Seeed XIAO nRF52840 Sense</h4>
+                  <p class="text-base text-gray-600 mt-2">
+                    Fungsi: MCU utama — menangani BLE, pemrosesan sensor (IMU),
+                    dan logika aplikasi. <br /><strong>Cara terhubung:</strong>
+                    Terhubung ke DRV2605L via I2C untuk kendali haptik;
+                    berkomunikasi dengan smartphone via BLE GATT; mengawasi IMU
+                    untuk deteksi kecelakaan.
+                  </p>
+                </div>
+
+                <div class="p-4 bg-white rounded-xl shadow">
+                  <h4 class="font-bold">DRV2605L Haptic Driver</h4>
+                  <p class="text-base text-gray-600 mt-2">
+                    Fungsi: Mengubah sinyal digital menjadi pola getaran yang
+                    presisi. <br /><strong>Cara terhubung:</strong> I2C dari
+                    MCU; menggerakkan LRA berdasarkan konfigurasi
+                    waveform/preset; menyediakan mode rendah daya.
+                  </p>
+                </div>
+
+                <div class="p-4 bg-white rounded-xl shadow">
+                  <h4 class="font-bold">10mm LRA (Linear Resonant Actuator)</h4>
+                  <p class="text-base text-gray-600 mt-2">
+                    Fungsi: Aktuator haptik — memberikan sensasi getaran yang
+                    dapat dikenali pada kulit. <br /><strong
+                      >Cara terhubung:</strong
+                    >
+                    Digerakkan oleh DRV2605L; ditempatkan pada titik di sarung
+                    tangan yang memberikan kejernihan taktil maksimal.
+                  </p>
+                </div>
+
+                <div class="p-4 bg-white rounded-xl shadow">
+                  <h4 class="font-bold">Adafruit Micro-Lipo Charger</h4>
+                  <p class="text-base text-gray-600 mt-2">
+                    Fungsi: Modul pengisian aman untuk pod LiPo. <br /><strong
+                      >Cara terhubung:</strong
+                    >
+                    Terhubung ke baterai removable; menyediakan proteksi
+                    pengisian dan indikator status.
+                  </p>
+                </div>
+
+                <div class="p-4 bg-white rounded-xl shadow md:col-span-2">
+                  <h4 class="font-bold">Baterai — LiPo 400mAh</h4>
+                  <p class="text-base text-gray-600 mt-2">
+                    Fungsi: Menyediakan daya untuk MCU, driver haptik, dan
+                    komunikasi BLE. <br /><strong>Cara terhubung:</strong> Pod
+                    dapat dilepas dan diisi ulang melalui modul charger;
+                    manajemen daya dilakukan oleh sirkuit pengisian dan firmware
+                    untuk memaksimalkan umur baterai.
+                  </p>
+                </div>
+
+                <div class="p-4 bg-white rounded-xl shadow md:col-span-2">
+                  <h4 class="font-bold">Alur Koneksi Singkat (Ringkasan)</h4>
+                  <ol
+                    class="list-decimal pl-5 text-base text-gray-600 mt-2 space-y-1"
+                  >
+                    <li>Smartphone → BLE → Glove primer (XIAO MCU)</li>
+                    <li>XIAO MCU → I2C → DRV2605L → LRA (haptic actuation)</li>
+                    <li>
+                      XIAO MCU ↔ Glove sekunder (BLE sync/mesh) untuk umpan
+                      balik seragam
+                    </li>
+                    <li>
+                      IMU (di XIAO) memantau gerak → jika mendeteksi kecelakaan
+                      jalankan prosedur SOS via smartphone
+                    </li>
+                  </ol>
+                  <!-- Diagram alur sederhana -->
+                  <div class="mt-4">
+                    <svg
+                      viewBox="0 0 800 180"
+                      class="w-full h-auto"
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      aria-label="Diagram alur koneksi glove"
+                    >
+                      <defs>
+                        <marker
+                          id="arrow"
+                          markerWidth="10"
+                          markerHeight="10"
+                          refX="10"
+                          refY="5"
+                          orient="auto"
+                        >
+                          <path d="M0,0 L10,5 L0,10 z" fill="#d63384" />
+                        </marker>
+                      </defs>
+                      <rect
+                        x="10"
+                        y="20"
+                        width="160"
+                        height="60"
+                        rx="10"
+                        fill="#fff"
+                        stroke="#e6a7c7"
+                      />
+                      <text
+                        x="90"
+                        y="55"
+                        text-anchor="middle"
+                        font-size="12"
+                        fill="#333"
+                      >
+                        Smartphone (Maps)
+                      </text>
+
+                      <rect
+                        x="210"
+                        y="20"
+                        width="160"
+                        height="60"
+                        rx="10"
+                        fill="#fff"
+                        stroke="#c3d6ff"
+                      />
+                      <text
+                        x="290"
+                        y="55"
+                        text-anchor="middle"
+                        font-size="12"
+                        fill="#333"
+                      >
+                        Glove Primer (XIAO MCU)
+                      </text>
+
+                      <rect
+                        x="410"
+                        y="20"
+                        width="140"
+                        height="60"
+                        rx="10"
+                        fill="#fff"
+                        stroke="#ffd6e8"
+                      />
+                      <text
+                        x="480"
+                        y="55"
+                        text-anchor="middle"
+                        font-size="12"
+                        fill="#333"
+                      >
+                        DRV2605L + LRA
+                      </text>
+
+                      <rect
+                        x="590"
+                        y="20"
+                        width="160"
+                        height="60"
+                        rx="10"
+                        fill="#fff"
+                        stroke="#c3d6ff"
+                      />
+                      <text
+                        x="670"
+                        y="55"
+                        text-anchor="middle"
+                        font-size="12"
+                        fill="#333"
+                      >
+                        Glove Sekunder
+                      </text>
+
+                      <!-- arrows -->
+                      <line
+                        x1="170"
+                        y1="50"
+                        x2="210"
+                        y2="50"
+                        stroke="#d63384"
+                        stroke-width="2"
+                        marker-end="url(#arrow)"
+                      />
+                      <line
+                        x1="370"
+                        y1="50"
+                        x2="410"
+                        y2="50"
+                        stroke="#d63384"
+                        stroke-width="2"
+                        marker-end="url(#arrow)"
+                      />
+                      <line
+                        x1="550"
+                        y1="50"
+                        x2="590"
+                        y2="50"
+                        stroke="#d63384"
+                        stroke-width="2"
+                        marker-end="url(#arrow)"
+                      />
+
+                      <!-- IMU -> SOS arrow -->
+                      <line
+                        x1="300"
+                        y1="80"
+                        x2="300"
+                        y2="120"
+                        stroke="#6b7280"
+                        stroke-dasharray="4 4"
+                        marker-end="url(#arrow)"
+                      />
+                      <rect
+                        x="240"
+                        y="120"
+                        width="120"
+                        height="40"
+                        rx="8"
+                        fill="#fff"
+                        stroke="#f6c6c6"
+                      />
+                      <text
+                        x="300"
+                        y="145"
+                        text-anchor="middle"
+                        font-size="12"
+                        fill="#333"
+                      >
+                        IMU → Auto-SOS
+                      </text>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script>
+      // Accessible tab switching: click or Enter/Space to activate
+      const tabs = Array.from(document.querySelectorAll(".tab-btn"));
+      const contents = Array.from(document.querySelectorAll(".tab-content"));
+
+      function activateTab(button) {
+        const targetId = button.dataset.tab;
+        contents.forEach((c) => c.classList.add("hidden"));
+        tabs.forEach((t) => {
+          t.classList.remove("bg-pink-400", "text-white");
+          t.classList.add("bg-white", "text-pink-500");
+          t.setAttribute("aria-selected", "false");
+        });
+
+        const target = document.getElementById(targetId);
+        if (target) target.classList.remove("hidden");
+
+        button.classList.add("bg-pink-400", "text-white");
+        button.setAttribute("aria-selected", "true");
+        button.focus();
+      }
+
+      tabs.forEach((btn) => {
+        btn.addEventListener("click", () => activateTab(btn));
+        btn.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            activateTab(btn);
+          }
+          // Arrow navigation
+          if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+            const idx = tabs.indexOf(btn);
+            const dir = e.key === "ArrowRight" ? 1 : -1;
+            const next = tabs[(idx + dir + tabs.length) % tabs.length];
+            next.focus();
+          }
+        });
+      });
+
+      // Initialize: ensure first tab active
+      if (tabs.length) activateTab(tabs[0]);
+    </script>
+  </body>
+</html>
