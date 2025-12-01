@@ -134,6 +134,51 @@
         color: var(--primary-text-color);
         font-weight: 600;
       }
+
+      /* Lightbox styles */
+      .lightbox-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 200ms ease;
+        z-index: 60;
+      }
+      .lightbox-overlay.open {
+        visibility: visible;
+        opacity: 1;
+      }
+      .lightbox-content {
+        max-width: 92%;
+        max-height: 92%;
+        text-align: center;
+        position: relative;
+      }
+      .lightbox-content img {
+        max-width: 100%;
+        max-height: 80vh;
+        border-radius: 8px;
+      }
+      .lightbox-caption {
+        color: #f3f4f6;
+        margin-top: 0.5rem;
+        font-size: 0.95rem;
+      }
+      .lightbox-close {
+        position: fixed;
+        top: 18px;
+        right: 18px;
+        color: #fff;
+        background: transparent;
+        border: 0;
+        font-size: 32px;
+        cursor: pointer;
+        z-index: 70;
+      }
     </style>
   </head>
 
@@ -333,6 +378,14 @@
                 </li>
               </ol>
 
+              <h4 class="font-semibold mt-4">
+                Detail Konektivitas & Manajemen Daya
+              </h4>
+              <p class="text-gray-600 mt-1">
+                Rincian singkat mengenai koneksi perangkat dan strategi
+                manajemen daya.
+              </p>
+
               <div class="mt-6 grid sm:grid-cols-2 gap-4">
                 <div class="p-4 bg-white rounded-lg shadow">
                   <h4 class="font-semibold">Konektivitas</h4>
@@ -365,6 +418,17 @@
               </h3>
               <div class="grid md:grid-cols-2 gap-6">
                 <div class="p-4 bg-white rounded-xl shadow">
+                  <figure class="mb-3">
+                    <img
+                      src="seeed-xiao.jpg"
+                      loading="lazy"
+                      alt="Seeed XIAO nRF52840 Sense"
+                      class="w-full h-36 object-contain rounded cursor-pointer"
+                    />
+                    <figcaption class="text-sm text-gray-500 mt-1">
+                      Seeed XIAO nRF52840 Sense
+                    </figcaption>
+                  </figure>
                   <h4 class="font-bold">Seeed XIAO nRF52840 Sense</h4>
                   <p class="text-base text-gray-600 mt-2">
                     Fungsi: MCU utama — menangani BLE, pemrosesan sensor (IMU),
@@ -376,6 +440,17 @@
                 </div>
 
                 <div class="p-4 bg-white rounded-xl shadow">
+                  <figure class="mb-3">
+                    <img
+                      src="drv2605l.png"
+                      loading="lazy"
+                      alt="DRV2605L Haptic Driver"
+                      class="w-full h-28 object-contain rounded cursor-pointer"
+                    />
+                    <figcaption class="text-sm text-gray-500 mt-1">
+                      DRV2605L Haptic Driver
+                    </figcaption>
+                  </figure>
                   <h4 class="font-bold">DRV2605L Haptic Driver</h4>
                   <p class="text-base text-gray-600 mt-2">
                     Fungsi: Mengubah sinyal digital menjadi pola getaran yang
@@ -386,6 +461,17 @@
                 </div>
 
                 <div class="p-4 bg-white rounded-xl shadow">
+                  <figure class="mb-3">
+                    <img
+                      src="10mm-lra.jpg"
+                      loading="lazy"
+                      alt="10mm LRA Linear Resonant Actuator"
+                      class="w-full h-28 object-contain rounded cursor-pointer"
+                    />
+                    <figcaption class="text-sm text-gray-500 mt-1">
+                      10mm LRA (Linear Resonant Actuator)
+                    </figcaption>
+                  </figure>
                   <h4 class="font-bold">10mm LRA (Linear Resonant Actuator)</h4>
                   <p class="text-base text-gray-600 mt-2">
                     Fungsi: Aktuator haptik — memberikan sensasi getaran yang
@@ -398,6 +484,17 @@
                 </div>
 
                 <div class="p-4 bg-white rounded-xl shadow">
+                  <figure class="mb-3">
+                    <img
+                      src="adafruit-micro-lipo.jpg"
+                      loading="lazy"
+                      alt="Adafruit Micro-Lipo Charger"
+                      class="w-full h-28 object-contain rounded cursor-pointer"
+                    />
+                    <figcaption class="text-sm text-gray-500 mt-1">
+                      Adafruit Micro-Lipo Charger
+                    </figcaption>
+                  </figure>
                   <h4 class="font-bold">Adafruit Micro-Lipo Charger</h4>
                   <p class="text-base text-gray-600 mt-2">
                     Fungsi: Modul pengisian aman untuk pod LiPo. <br /><strong
@@ -409,6 +506,17 @@
                 </div>
 
                 <div class="p-4 bg-white rounded-xl shadow md:col-span-2">
+                  <figure class="mb-3">
+                    <img
+                      src="lipo-400mah.jpg"
+                      loading="lazy"
+                      alt="Baterai LiPo 400mAh"
+                      class="w-full h-32 object-contain rounded cursor-pointer"
+                    />
+                    <figcaption class="text-sm text-gray-500 mt-1">
+                      Baterai LiPo 400mAh
+                    </figcaption>
+                  </figure>
                   <h4 class="font-bold">Baterai — LiPo 400mAh</h4>
                   <p class="text-base text-gray-600 mt-2">
                     Fungsi: Menyediakan daya untuk MCU, driver haptik, dan
@@ -605,16 +713,23 @@
 
       function activateTab(button) {
         const targetId = button.dataset.tab;
+
+        // Hide all tab content
         contents.forEach((c) => c.classList.add("hidden"));
+
+        // Reset all tab buttons to inactive state
         tabs.forEach((t) => {
           t.classList.remove("bg-pink-400", "text-white");
           t.classList.add("bg-white", "text-pink-500");
           t.setAttribute("aria-selected", "false");
         });
 
+        // Show selected tab content
         const target = document.getElementById(targetId);
         if (target) target.classList.remove("hidden");
 
+        // Style active tab button
+        button.classList.remove("bg-white", "text-pink-500");
         button.classList.add("bg-pink-400", "text-white");
         button.setAttribute("aria-selected", "true");
         button.focus();
@@ -639,6 +754,79 @@
 
       // Initialize: ensure first tab active
       if (tabs.length) activateTab(tabs[0]);
+    </script>
+
+    <!-- Lightbox markup -->
+    <div
+      id="lightbox"
+      class="lightbox-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <button id="lightboxClose" class="lightbox-close" aria-label="Tutup">
+        &times;
+      </button>
+      <div class="lightbox-content">
+        <img id="lightboxImg" src="" alt="" />
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const imgs = Array.from(
+          document.querySelectorAll("#tab-komponen figure img")
+        );
+        if (!imgs.length) return;
+
+        const overlay = document.getElementById("lightbox");
+        const lbImg = document.getElementById("lightboxImg");
+        const lbCaption = document.getElementById("lightboxCaption");
+        const lbClose = document.getElementById("lightboxClose");
+        let current = -1;
+
+        function openAt(i) {
+          const img = imgs[i];
+          if (!img) return;
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || "";
+          const cap =
+            img.closest("figure")?.querySelector("figcaption")?.textContent ||
+            img.alt ||
+            "";
+          lbCaption.textContent = cap;
+          overlay.classList.add("open");
+          overlay.setAttribute("aria-hidden", "false");
+          current = i;
+        }
+
+        function close() {
+          overlay.classList.remove("open");
+          overlay.setAttribute("aria-hidden", "true");
+          lbImg.src = "";
+          current = -1;
+        }
+
+        imgs.forEach((img, i) => {
+          img.setAttribute("loading", "lazy");
+          img.classList.add("cursor-pointer");
+          img.addEventListener("click", () => openAt(i));
+        });
+
+        overlay.addEventListener("click", (e) => {
+          if (e.target === overlay || e.target.id === "lightboxClose") close();
+        });
+        lbClose.addEventListener("click", close);
+
+        document.addEventListener("keydown", (e) => {
+          if (current === -1) return;
+          if (e.key === "Escape") return close();
+          if (e.key === "ArrowLeft")
+            openAt((current - 1 + imgs.length) % imgs.length);
+          if (e.key === "ArrowRight") openAt((current + 1) % imgs.length);
+        });
+      })();
     </script>
   </body>
 </html>
